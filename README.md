@@ -14,7 +14,7 @@ Creating this web application will provide exposure to:
 ## Specifications
 
 - [ ] Any user can add books into the system via an admin page
-- [ ] Books entered in the system are listed on the home page
+- [X] Books entered in the system are listed on the home page
 - [ ] Users can search for books by title
 - [ ] Users can view book details on a book detail page
 - [ ] All code submissions are peer reviewed via GitHub PR by at least two members of the team, and master is always in a stable state (tests passed, site functions)
