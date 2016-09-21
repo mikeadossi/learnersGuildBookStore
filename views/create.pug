@@ -4,16 +4,16 @@ block content
 
   form(name='newbook', action='/books/new', method='post')
     div
-      label(for='title') Title
-      input(type='text', name=book.title)
+      label(for='title') Title:
+      input(type='text', name='title', value='titles')
     div
-      label(for='author') Author
-      input(type='text', name='Author')
+      label(for='author') Author:
+      input(type='text', name='author')
     div
-      label(for='image_url') Image URL
-      input(type='text', name='Image URL')
+      label(for='image_url') Image URL:
+      input(type='text', name='image_url')
     div
-      label(for='Description') Description
-      input(type='text', name='Description')
+      label(for='Description') Description:
+      input(type='text', name='description')
     div
       button(type='submit') Submit

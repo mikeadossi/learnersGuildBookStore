@@ -4,26 +4,21 @@ var db = require('../database');
 
 
 router.get('/create', (req, res, next) => {
-  res.render('create')
-  .catch(error => { res.render('error', {error})
-  })
+  res.render('create', { book: {} })
 })
 
 router.post('/new', (req, res, next) => {
-  //
-  // const title = req.body.title
-  // const author = req.body.author
-  // const image = req.body.image_url
-  // const description = req.body.description
-  //
+
+  const {title, author, image, description} = req.body
 
 
-  const {book} = req.body
-  console.log("book", book)
-  db.createBook(book)
-    .then(book => {res.redirect('/')
-  })
-  .catch(error => {res.render('error', {error})
+
+  // const {book} = req.body
+
+  // console.log("books title", books.title)
+  db.createBook(title, author, image, description)
+    .then(book => res.redirect('/') )
+    .catch(error => { res.render('error', {error})
   })
 })
 
