@@ -3,7 +3,16 @@ var router = express.Router();
 var db = require('../database');
 
 
-//get the index/landing page
-router.get('/', (req, res, next) => {
-  res.render('index.js')
+router.get('/create', (req, res, next) => {
+  res.render('create', { book: {} })
 })
+
+router.post('/new', (req, res, next) => {
+  const {title, author, image_url, description} = req.body
+  db.createBook(title, author, image_url, description)
+    .then(book => res.redirect('/') )
+    .catch(error => { res.render('error', {error})
+  })
+})
+
+module.exports = router
