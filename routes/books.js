@@ -15,4 +15,8 @@ router.post('/new', (req, res, next) => {
   })
 })
 
+router.get('/:id', (req, res, next) => {
+  res.render('details', {book})
+})
+
 module.exports = router
