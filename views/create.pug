@@ -2,18 +2,18 @@ extends layout
 
 block content
 
-form(name='newbook', action='/new', method='post')
-  div
-    label(for='title') Title
-    input(type='text', name='Title')
-  div
-    label(for='author') Author
-    input(type='text', name='Author')
-  div
-    label(for='image_url') Image URL
-    input(type='text', name='Image URL')
-  div
-    label(for='Description') Description
-    input(type='text', name='Description')
-  div
-    input(type='submit', value='Submit Entry')
+  form(name='newbook', action='/new', method='post')
+    div
+      label(for='title') Title
+      input(type='text', name='Title')
+    div
+      label(for='author') Author
+      input(type='text', name='Author')
+    div
+      label(for='image_url') Image URL
+      input(type='text', name='Image URL')
+    div
+      label(for='Description') Description
+      input(type='text', name='Description')
+    div
+      input(type='submit', value='Submit Entry')
