@@ -3,18 +3,28 @@ var router = express.Router();
 var db = require('../database');
 
 
-//get the index/landing page
-// router.get('/', (req, res, next) => {
-//   res.render('index.pug')
-// })
-
 router.get('/create', (req, res, next) => {
   res.render('create')
+  .catch(error => { res.render('error', {error})
+  })
 })
 
-// router.post('/new', (req, res, next) => {
-//   const title = request.body.title
-//   const author = request.body.author
+router.post('/new', (req, res, next) => {
+  //
+  // const title = req.body.title
+  // const author = req.body.author
+  // const image = req.body.image_url
+  // const description = req.body.description
+  //
 
-// })
+
+  const {book} = req.body
+  console.log("book", book)
+  db.createBook(book)
+    .then(book => {res.redirect('/')
+  })
+  .catch(error => {res.render('error', {error})
+  })
+})
+
 module.exports = router

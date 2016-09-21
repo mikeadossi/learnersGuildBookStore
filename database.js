@@ -10,10 +10,11 @@ const getAllBooks = () => {
   return database.any(sql)
 }
 
-const createBook = (title, author, image_url, description) => {
+const createBook = (attributes) => {
   const sql = 'INSERT INTO books (title, author, image_url, description) VALUES ($1, $2, $3, $4)'
+  const variables = [attributes.title, attributes.author, attributes.image_url, attributes.description]
 
-  return database.one(sql)
+  return database.one(sql, variables)
 }
 
 module.exports = {

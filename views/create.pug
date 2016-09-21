@@ -2,10 +2,10 @@ extends layout
 
 block content
 
-  form(name='newbook', action='/new', method='post')
+  form(name='newbook', action='/books/new', method='post')
     div
       label(for='title') Title
-      input(type='text', name='Title')
+      input(type='text', name=book.title)
     div
       label(for='author') Author
       input(type='text', name='Author')
@@ -16,4 +16,4 @@ block content
       label(for='Description') Description
       input(type='text', name='Description')
     div
-      input(type='submit', value='Submit Entry')
+      button(type='submit') Submit
