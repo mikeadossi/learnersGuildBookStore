@@ -12,6 +12,12 @@ const getAllBooks = () => {
   return database.any(sql)
 }
 
+const createBook = (title, author, image_url, description) =>
+  const sql = 'INSERT INTO books (title, author, image_url, description) VALUES ($1, $2, $3, $4)'
+
+  return database.one(sql)
+
 module.exports = {
-  getAllBooks
+  getAllBooks,
+  createBook
 }

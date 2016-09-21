@@ -8,6 +8,12 @@ var db = require('../database');
 //   res.render('index.pug')
 // })
 
-router.get('/new', req, res, next) => {
-  res.render('create.pug')
+router.get('/create', (req, res, next) => {
+  res.render('create')
+})
+
+router.post('/new', (req, res, next) => {
+  const title = request.body.title
+  const author = request.body.author
+
 })
