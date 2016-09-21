@@ -12,7 +12,7 @@ const getAllBooks = () => {
 
 const createBook = (title, author, image_url, description) => {
   const sql = `INSERT INTO books (title, author, image_url, description) VALUES ($1, $2, $3, $4) RETURNING *`
-  // const variables = [attributes.title, attributes.author, attributes.image_url, attributes.description]
+
 
   return database.one(sql, [title, author, image_url, description] )
 }

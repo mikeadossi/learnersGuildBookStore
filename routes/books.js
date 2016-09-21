@@ -8,15 +8,8 @@ router.get('/create', (req, res, next) => {
 })
 
 router.post('/new', (req, res, next) => {
-
-  const {title, author, image, description} = req.body
-
-
-
-  // const {book} = req.body
-
-  // console.log("books title", books.title)
-  db.createBook(title, author, image, description)
+  const {title, author, image_url, description} = req.body
+  db.createBook(title, author, image_url, description)
     .then(book => res.redirect('/') )
     .catch(error => { res.render('error', {error})
   })

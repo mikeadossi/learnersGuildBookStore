@@ -3,9 +3,9 @@ var router = express.Router();
 var db = require('../database');
 
 /* GET home page. */
-router.get('/', (req, res, next) => {
+router.get('/', (request, response, next) => {
   db.getAllBooks()
-    .then(books => res.render('index', { books }));
+  .then(books => response.render('index', { books }));
 });
 
 
