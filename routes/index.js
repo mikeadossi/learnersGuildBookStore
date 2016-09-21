@@ -4,8 +4,8 @@ var db = require('../database');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  const book = db.getAllBooks()
-  res.render('index', { books });
+  db.getAllBooks()
+    .then(books => res.render('index', { books }));
 });
 
 
