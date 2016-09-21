@@ -1,4 +1,13 @@
 extends layout
 
 block content
-  
+
+form(name='newbook', action='/new', method='post')
+  div
+    label(for='title') Title
+    input(type='text', name='Title')
+  div
+    label(fpr='author') Author
+    input(type='text', name='Author')
+  div
+    input(type='submit', value='Submit Entry')
