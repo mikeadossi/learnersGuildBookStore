@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var db = require('../database');
 
-import db from '../database'
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' });
+  const book = db.getAllBooks()
+  res.render('index', { books });
 });
 
 
