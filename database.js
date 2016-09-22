@@ -17,7 +17,14 @@ const createBook = (title, author, image_url, description) => {
   return database.one(sql, [title, author, image_url, description] )
 }
 
+const getBookById = (book_id) => {
+  const sql = 'SELECT * FROM books WHERE books.id = $1'
+
+  return database.one(sql, [book_id])
+}
+
 module.exports = {
   getAllBooks,
-  createBook
+  createBook,
+  getBookById
 }
