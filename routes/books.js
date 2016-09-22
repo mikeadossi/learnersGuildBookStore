@@ -17,10 +17,10 @@ router.post('/new', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   const book_id = req.params.id
   db.getBookById(book_id)
-  .then(book => {
-    res.render('details', {book})
-  })
-  .catch(error => { res.render('error', {error})})
+    .then(book => {res.render('details', {book})
+    })
+    .catch(error => { res.render('error', {error})
+    })
 })
 
 module.exports = router
