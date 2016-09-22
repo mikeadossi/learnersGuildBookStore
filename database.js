@@ -22,8 +22,25 @@ const getBookById = (book_id) => {
   return database.one(sql, [book_id])
 }
 
+const findBooks = (options) => {
+  const sql = 'SELECT * FROM books WHERE LOWER(title) LIKE $1 OR LOWER(description) LIKE $1 OR LOWER(author) LIKE $1'
+  let variables = []
+  if (options.q) {
+    let q = options.q
+      .toLowerCase()
+      .replace(/^ */, '%')
+      .replace(/ *$/, '%')
+      .replace(/ +/g, '%')
+
+    variables.push(q)
+
+  return database.any(sql, variables)
+  }
+}
+
 module.exports = {
   getAllBooks,
   createBook,
-  getBookById
+  getBookById,
+  findBooks
 }
