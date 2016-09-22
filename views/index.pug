@@ -1,10 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Welcome to La Librairie
 
-  ul
-    for book in books
-      li= book.title
-      li= book.author
+  table
+    thead
+      tr
+        th
+        th Title
+        th Author
+        th Description
+    tbody
+      for book in books
+        tr
+          td
+            img(src=book.image_url) 
+          td
+            a(href="books/"+book.id)= book.title
+          td= book.author
+          td= book.description
