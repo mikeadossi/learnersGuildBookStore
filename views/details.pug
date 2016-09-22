@@ -8,3 +8,6 @@ block content
       li
         img(src=book.image_url)
       li= book.description
+
+      form(name='delete', id='delete-form', action='/books/delete/'+book.id, method='get')
+        input(type='submit' value='Delete Book')

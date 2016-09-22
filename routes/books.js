@@ -14,6 +14,14 @@ router.post('/new', (req, res, next) => {
     .catch(error => { res.render('error', {error})})
 })
 
+router.get('/delete/:id', (req, res, next) => {
+  const id = req.params.id
+  db.deleteBookById(id)
+  .then(id => res.redirect('/') )
+  .catch(error => {res.render('error', {error})
+  })
+})
+
 router.get('/:id', (req, res, next) => {
   const book_id = req.params.id
   db.getBookById(book_id)
@@ -22,5 +30,7 @@ router.get('/:id', (req, res, next) => {
     .catch(error => { res.render('error', {error})
     })
 })
+
+
 
 module.exports = router

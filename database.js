@@ -38,9 +38,19 @@ const findBooks = (options) => {
   }
 }
 
+const deleteBookById = (id) => {
+  const sql = 'DELETE FROM books WHERE id = $1'
+  //why does id work here but on line 20 it has to be books.id?
+  //I checked postico to see if the sql queries work and they both do
+
+  return database.none(sql, [id])
+
+}
+
 module.exports = {
   getAllBooks,
   createBook,
   getBookById,
-  findBooks
+  findBooks,
+  deleteBookById
 }
