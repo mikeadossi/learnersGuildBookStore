@@ -6,7 +6,6 @@ block content
   table
     thead
       tr
-        th
         th Title
         th Author
         th Description
@@ -14,8 +13,6 @@ block content
       for book in books
         tr
           td
-            img(src=book.image_url) 
-          td
             a(href="books/"+book.id)= book.title
           td= book.author
-          td= book.description
+          td.descr= book.description
