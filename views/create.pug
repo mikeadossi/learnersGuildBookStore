@@ -2,7 +2,8 @@ extends layout
 
 block content
 
-  form(name='newbook', action='/books/new', method='post')
+
+  form(name='newbook', action='/books/new', method='post' id='createPage')
     div
       label(for='title') Title:
       input(type='text', name='title', value='titles')
