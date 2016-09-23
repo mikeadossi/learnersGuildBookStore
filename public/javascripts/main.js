@@ -1,7 +1,7 @@
 
 var str = document.querySelector('.bookDescr');
 var strInner = str.innerHTML
-var bookLogo = document.querySelector('.bookLogo');
+var bookLogo = document.querySelector('#bookLogo');
 var homeLink = document.querySelector('.homeLink');
 
 strInner.substring(0, Math.min(10,strInner.length))
