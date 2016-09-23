@@ -1,8 +1,209 @@
 body {
-  padding: 50px;
+  padding: none;
+  margin:0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  /*color: #00B7FF;*/
+  color: white;
+}
+
+td{
+  padding:2em
+}
+
+.descr{
+  color: black;
+  background-color: #F5F5F5;
+}
+.bookTitle{
+  background-color: skyblue;
+}
+.bookTitle:hover{
+  background-color:steelblue;
+  transition: background-color 2s;
+}
+.searchBtn:hover{
+  background-color:orange;
+}
+.navLink, .homeLink{
+  text-decoration:none;
+}
+.navLink:hover{
+  color:orange
+}
+.bookAuthor{
+  background-color:#F5F5F5;
+}
+
+nav{
+  background-color:#003366;
+  overflow:hidden;
+  padding:0.5em;
+  margin:0;
+  width:100%;
+  position:fixed;
+}
+
+#container, #createPage{
+  padding:3em 5% 5% 5%;
+}
+
+.navText{
+  display:inline-block;
+  margin-right:2em;
+
+}
+.details{
+  list-style-type: none;
+}
+
+.bannerImg{
+  width:100%;
+  height:10%;
+}
+#bookLogo{
+  height:4em;
+  width:4em;
+  float:left;
+  cursor:pointer;
+  margin-left:1em;
+  content:url('http://i3.7399.com/android/150306/1428i.png');
+}
+#createPageBannerImg{
+  width:100%;
+  height:40%;
+  content:url('http://i.huffpost.com/gen/1764219/thumbs/o-AFRICAN-AMERICAN-WOMAN-READING-BOOK-facebook.jpg');
+}
+.createPageInputContent{
+  background-color:#F5F5F5;
+  text-align:center;
+  margin-top:1em;
+  padding:2em;
+}
+.addBookBtn{
+  cursor:pointer;
+  margin-top:1em;
+}
+.addBookInputs{
+  width:40em;
+  height:1.5em;
+}
+#addBookTitleInput{
+  margin-left:5em;
+}
+#addBookAuthorInput{
+  margin-left:3.5em;
+}
+#addBookImageInput{
+  margin-left:1.25em;
+}
+#addDescriptionInput{
+  margin-left:0.6em;
+}
+.navInput{
+  float:right;
+  margin-right:5%;
+  list-style-type:none;
+}
+.inputBox{
+  width:30em;
+  height:2.2em;
+  border:none;
+}
+.searchBtn{
+  background-color:#FEBD69;
+  border:none;
+  height:2.4em;
+  color:#003366;
+  cursor:pointer;
+  border-radius:0 10px 10px 0;
+  -moz-border-radius:0 10px 10px 0;
+  -webkit-border-radius:0 10px 10px 0;
+}
+.titleDetail{
+  font-size:2em;
+  margin-top:1.5em;
+  margin-bottom:0.5em;
+}
+.authorDetail{
+  margin-bottom:0.5em;
+}
+/*.bookDescriptionDetail{
+  background-color:white;
+  margin-top:1em;
+  padding:2em;
+  float:right;
+  width:55%;
+}*/
+.bookImg{
+  float:left;
+}
+.bookDetailsContainer{
+
+  height:38em;
+}
+.hiddenNavInput{
+  display:none;
+}
+
+@media (max-width:676px){
+  .detailsUi{
+    background-color:lightgrey;
+    padding:0;
+  }
+  .bookImg{
+    height:20em;
+    width:14em;
+    float:none;
+    padding:0 0 1em 0;
+  }
+  .bookDescriptionDetail{
+    width:100%;
+  }
+  .bookDetailsContainer{
+    padding:3em 0 2em 0;
+    text-align:center;
+  }
+  .bannerImg{
+    display:none;
+  }
+  .inputBox{
+    margin-top:4em;
+    margin-bottom:1em;
+    width:23em;
+  }
+  #container{
+    padding-top:10em;
+  }
+  .addBookInputs{
+    width:14em
+  }
+}
+
+@media (min-width:676px) and (max-width:1043px){
+  .detailsUi{
+    background-color:skyblue;
+  }
+  .bookImg{
+    height:30em;
+    width:20em;
+    float:left;
+    padding:0 1em 1em 0;
+  }
+  .bookDescriptionDetail{
+    width:100%;
+    float:none;
+  }
+}
+
+@media only screen and (min-width:1044px){
+  .bookImg{
+    padding-right: 2em;
+  }
+  .detailsUi{
+    width:60em;
+    background-color:red;
+  }
 }

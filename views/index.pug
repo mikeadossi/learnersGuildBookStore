@@ -6,16 +6,16 @@ block content
   table
     thead
       tr
-        th
         th Title
         th Author
         th Description
     tbody
       for book in books
         tr
-          td
-            img(src=book.image_url) 
-          td
+          td.bookTitle
             a(href="books/"+book.id)= book.title
-          td= book.author
-          td= book.description
+          td.bookAuthor= book.author
+          td.bookDescr= book.description
+          td.btn
+
+    script(src='/javascripts/main.js')

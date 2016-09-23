@@ -2,12 +2,12 @@ extends layout
 
 block content
 
-  ul
-      li= book.title
-      li= book.author
-      li
-        img(src=book.image_url)
-      li= book.description
+  ul.bookDetailsContainer
+      li.details.titleDetail= book.title
+      li.details.authorDetail= book.author
+      ul.detailsUi
+        img(src=book.image_url).bookImg
+      li.details.bookDescriptionDetail= book.description
 
-      form(name='delete', id='delete-form', action='/books/delete/${book.id}, method='get')
-        input(type='submit' value='Delete Book')
+      form(name='delete', id='delete-form', action=`/books/delete/${book.id}`, method='get')
+        input(type='submit', value='Delete Book')
