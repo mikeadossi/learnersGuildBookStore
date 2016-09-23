@@ -24,6 +24,15 @@ td{
   background-color:steelblue;
   transition: background-color 2s;
 }
+.submitBtn:hover{
+  background-color:orange;
+}
+.navLink, .homeLink{
+  text-decoration:none;
+}
+.navLink:hover{
+  color:orange
+}
 .bookAuthor{
   background-color:#F5F5F5;
 }
