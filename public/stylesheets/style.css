@@ -5,7 +5,8 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  /*color: #00B7FF;*/
+  color: white;
 }
 
 td{
@@ -13,18 +14,66 @@ td{
 }
 
 .descr{
-  color:black;
-  border: solid grey 1px;
-  background-color:lightgrey;
+  color: black;
+  background-color: #F5F5F5;
+}
+.title{
+  background-color: skyblue;
+}
+.author{
+  background-color:#F5F5F5;
 }
 
 nav{
-  background-color:green;
+  background-color:#003366;
   overflow:hidden;
-  padding:0;
+  padding:0.5em;
   margin:0;
+  width:100%
 }
 
 #container{
   padding:3em 5% 5% 5%;
+}
+
+.navText{
+  display:inline-block;
+  margin-right:2em;
+
+}
+.details{
+  color:red;
+  list-style-type: none;
+}
+
+img{
+  width:100%;
+  height:20%;
+}
+.bookLogo{
+  height:4em;
+  width:4em;
+  float:left;
+  cursor:pointer;
+  margin-left:1em;
+}
+.navInput{
+  float:right;
+  margin-right:5%;
+  list-style-type:none;
+}
+.inputBox{
+  width:30em;
+  height:2.2em;
+  border:none;
+}
+.submitBtn{
+  background-color:#FEBD69;
+  border:none;
+  height:2.4em;
+  color:#003366;
+  cursor:pointer;
+  border-radius:0 10px 10px 0;
+  -moz-border-radius:0 10px 10px 0;
+  -webkit-border-radius:0 10px 10px 0;
 }
