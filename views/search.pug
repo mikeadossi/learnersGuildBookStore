@@ -3,19 +3,14 @@ extends layout
 block content
   h1 Welcome to La Librairie
 
-  table
-    thead
-      tr
-        th
-        th Title
-        th Author
-        th Description
+  div.searchHeadingsTable
+    div.headerDiv
     tbody
-      for q in query  
-        tr
-          td
-            img(src=q.image_url)
-          td
+      for q in query
+        div
+          div
+            img.searchResultsImg(src=q.image_url)
+          div.searchResults
             a(href="books/"+q.id)= q.title
-          td= q.author
-          td= q.description
+          div.searchResults= q.author
+          div.descriptionTable.searchResults= q.description

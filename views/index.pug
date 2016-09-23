@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  script(src='/javascripts/main.js')
   h1 Welcome to La Librairie
 
   table
@@ -15,7 +16,6 @@ block content
           td.bookTitle
             a(href="books/"+book.id)= book.title
           td.bookAuthor= book.author
-          td.bookDescr= book.description
-          td.btn
 
-    script(src='/javascripts/main.js')
+          td.bookDescr= book.description.slice( 0, 150 )
+          td.btn

@@ -5,7 +5,15 @@ var db = require('../database');
 /* GET home page. */
 router.get('/', (request, response, next) => {
   db.getAllBooks()
-    .then(books => {response.render('index', {books})
+    .then(books => {
+      // const indexBooks = books.map( book =>
+      //   Object.assign( {}, book,
+      //     { description: book.description.slice( 0, 20 ) }
+      //   )
+      // )
+
+      response.render('index', { books }
+    )
   })
 })
 

@@ -3,8 +3,17 @@ body {
   margin:0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+a{
+  color:white;
+  text-decoration:none;
+}
 
-a {
+div a{
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+.homeLink, .navLink {
   /*color: #00B7FF;*/
   color: white;
 }
@@ -12,7 +21,12 @@ a {
 td{
   padding:2em
 }
-
+.searchResults{
+  padding-bottom: 10px;
+}
+.searchResultsImg{
+  padding-top: 30px;
+}
 .descr{
   color: black;
   background-color: #F5F5F5;
@@ -29,6 +43,9 @@ td{
 }
 .navLink, .homeLink{
   text-decoration:none;
+}
+.homeLink:hover{
+  color:orange;
 }
 .navLink:hover{
   color:orange
@@ -53,8 +70,13 @@ nav{
 .navText{
   display:inline-block;
   margin-right:2em;
-
 }
+
+.navText span {
+  display: inline-block;;
+  padding-top: 18px;
+}
+
 .details{
   list-style-type: none;
 }
@@ -150,7 +172,6 @@ nav{
 
 @media (max-width:676px){
   .detailsUi{
-    background-color:lightgrey;
     padding:0;
   }
   .bookImg{
@@ -180,12 +201,13 @@ nav{
   .addBookInputs{
     width:14em
   }
+  .navInput{
+    margin-top:1em;
+  }
+
 }
 
 @media (min-width:676px) and (max-width:1043px){
-  .detailsUi{
-    background-color:skyblue;
-  }
   .bookImg{
     height:30em;
     width:20em;
@@ -196,6 +218,9 @@ nav{
     width:100%;
     float:none;
   }
+  .navInput{
+    margin-top:1em;
+  }
 }
 
 @media only screen and (min-width:1044px){
@@ -204,6 +229,12 @@ nav{
   }
   .detailsUi{
     width:60em;
-    background-color:red;
+  }
+  .descriptionTable{
+    position:absolute;
+    width:40em;
+  }
+  .navInput{
+    margin-top:1em;
   }
 }
