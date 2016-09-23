@@ -81,6 +81,7 @@ nav{
   background-color:#F5F5F5;
   text-align:center;
   margin-top:1em;
+  padding:2em;
 }
 .addBookBtn{
   cursor:pointer;
@@ -112,7 +113,7 @@ nav{
   height:2.2em;
   border:none;
 }
-.submitBtn{
+.searchBtn{
   background-color:#FEBD69;
   border:none;
   height:2.4em;
