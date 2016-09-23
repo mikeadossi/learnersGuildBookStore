@@ -1,5 +1,6 @@
 body {
-  padding: 50px;
+  padding: none;
+  margin:0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -8,9 +9,22 @@ a {
 }
 
 td{
-  background-color: grey;
+  padding:2em
 }
 
 .descr{
-  color:green;
+  color:black;
+  border: solid grey 1px;
+  background-color:lightgrey;
+}
+
+nav{
+  background-color:green;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+}
+
+#container{
+  padding:3em 5% 5% 5%;
 }
