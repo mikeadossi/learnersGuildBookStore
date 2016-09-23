@@ -9,5 +9,5 @@ block content
         img(src=book.image_url).bookImg
       li.details.bookDescriptionDetail= book.description
 
-      form(name='delete', id='delete-form', action='/books/delete/${book.id}, method='get')
-        input(type='submit' value='Delete Book')
+      form(name='delete', id='delete-form', action=`/books/delete/${book.id}`, method='get')
+        input(type='submit', value='Delete Book')
