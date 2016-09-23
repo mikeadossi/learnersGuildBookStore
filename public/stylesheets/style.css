@@ -130,34 +130,62 @@ nav{
 .authorDetail{
   margin-bottom:0.5em;
 }
-.bookDescriptionDetail{
+/*.bookDescriptionDetail{
   background-color:white;
   margin-top:1em;
   padding:2em;
   float:right;
   width:55%;
-}
+}*/
 .bookImg{
   float:left;
 }
 .bookDetailsContainer{
-  padding:3em;
-  width:90%;
+
   height:38em;
 }
 
-@media (max-width:645px){
-  .details{
+@media (max-width:676px){
+  .detailsUi{
     background-color:lightgrey;
+    padding:0;
+  }
+  .bookImg{
+    height:20em;
+    width:14em;
+    float:none;
+    padding:0 0 1em 0;
+  }
+  .bookDescriptionDetail{
+    width:100%;
+  }
+  .bookDetailsContainer{
+    padding:3em 0 2em 0;
+    text-align:center;
   }
 }
-@media (min-width:646px) and (max-width:1043px){
-  .details{
+
+@media (min-width:676px) and (max-width:1043px){
+  .detailsUi{
     background-color:skyblue;
   }
+  .bookImg{
+    height:30em;
+    width:20em;
+    float:left;
+    padding:0 1em 1em 0;
+  }
+  .bookDescriptionDetail{
+    width:100%;
+    float:none;
+  }
 }
+
 @media only screen and (min-width:1044px){
-  .details{
+  .bookImg{
+    padding-right: 2em;
+  }
+  .detailsUi{
     width:60em;
     background-color:red;
   }
