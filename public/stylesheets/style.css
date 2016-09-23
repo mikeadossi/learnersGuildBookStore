@@ -145,3 +145,20 @@ nav{
   width:90%;
   height:38em;
 }
+
+@media (max-width:645px){
+  .details{
+    background-color:lightgrey;
+  }
+}
+@media (min-width:646px) and (max-width:1043px){
+  .details{
+    background-color:skyblue;
+  }
+}
+@media only screen and (min-width:1044px){
+  .details{
+    width:60em;
+    background-color:red;
+  }
+}
