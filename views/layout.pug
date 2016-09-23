@@ -4,15 +4,15 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     nav
-      a(href='/')
-        img(src="images/bookLogo.png")#bookLogo
       ul
-        span
         li.navText
-          a(href='/').homeLink Home
+          a.homeLink(href='/')
+            img(src="images/bookLogo.png")#bookLogo
+            span Home
 
         li.navText
-          a(href='/books/create').navLink Add Book
+          a(href='/books/create').navLink
+            span Add Book
         li.navInput
           form(action="/search", method="get")#searchDiv
             input(type="text", name="q", placeholder=" Search by Title").inputBox

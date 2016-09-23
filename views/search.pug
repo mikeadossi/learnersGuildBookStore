@@ -3,15 +3,15 @@ extends layout
 block content
   h1 Welcome to La Librairie
 
-  table
+  table.searchHeadingsTable
     thead
-      tr
+      tr.headingsTableRow
         th
         th Title
         th Author
         th Description
     tbody
-      for q in query  
+      for q in query
         tr
           td
             img(src=q.image_url)
