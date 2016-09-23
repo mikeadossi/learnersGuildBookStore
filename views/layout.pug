@@ -3,18 +3,21 @@ html
   head
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-
     nav
+      a(href='/')
+        img(src="images/bookLogo.png").bookLogo
       ul
-        li
+        span
+        li.navText
           a(href='/') Home
-        li
+
+        li.navText
           a(href='/books/create') Add Book
-        li
-          form(action="/search", method="get")
-            input(type="text", name="q", placeholder="Search by Title")
-            button(type="submit", value="Submit") Submit
+        li.navInput
+          form(action="/search", method="get")#searchDiv
+            input(type="text", name="q", placeholder="Search by Title").inputBox
+            button(type="submit", value="Submit").submitBtn Submit
 
-
+img(src="images/maleTurningPages.jpeg")
 #container
     block content

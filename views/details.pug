@@ -3,8 +3,8 @@ extends layout
 block content
 
   ul
-      li= book.title
-      li= book.author
-      li
+      li.details= book.title
+      li.details= book.author
+      li.details
         img(src=book.image_url)
-      li= book.description
+      li.details= book.description

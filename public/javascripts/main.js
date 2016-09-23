@@ -10,7 +10,7 @@ var strTruncated = strInner.substring(0, Math.min(10,strInner.length));
 //str.update('strTruncated');
 //strInner.innerHTML = strTruncated
 
-str.length == 10;
+// str.style.color = 'blue';
 
 console.log('strInner.length:', strInner.length)
 console.log('strTruncated:',strTruncated)
