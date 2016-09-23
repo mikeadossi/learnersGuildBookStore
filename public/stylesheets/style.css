@@ -3,7 +3,16 @@ body {
   margin:0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+a{
+  color:white;
+  text-decoration:none;
+}
 
+div a{
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
 .homeLink, .navLink {
   /*color: #00B7FF;*/
   color: white;
@@ -12,7 +21,12 @@ body {
 td{
   padding:2em
 }
-
+.searchResults{
+  padding-bottom: 10px;
+}
+.searchResultsImg{
+  padding-top: 30px;
+}
 .descr{
   color: black;
   background-color: #F5F5F5;
@@ -187,12 +201,10 @@ nav{
   .addBookInputs{
     width:14em
   }
-  .searchHeadingsTable{
-    background-color:green;
+  .navInput{
+    margin-top:1em;
   }
-  .headingsTableRow{
-    display:none;
-  }
+
 }
 
 @media (min-width:676px) and (max-width:1043px){
@@ -206,8 +218,8 @@ nav{
     width:100%;
     float:none;
   }
-  .searchHeadingsTable{
-    background-color:red;
+  .navInput{
+    margin-top:1em;
   }
 }
 
@@ -218,7 +230,11 @@ nav{
   .detailsUi{
     width:60em;
   }
-  .searchHeadingsTable{
-    background-color:skyblue;
+  .descriptionTable{
+    position:absolute;
+    width:40em;
+  }
+  .navInput{
+    margin-top:1em;
   }
 }
