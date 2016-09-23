@@ -17,8 +17,8 @@ router.post('/new', (req, res, next) => {
 router.get('/delete/:id', (req, res, next) => {
   const id = req.params.id
   db.deleteBookById(id)
-  .then(id => res.redirect('/') )
-  .catch(error => {res.render('error', {error})
+    .then(id => res.redirect('/') )
+    .catch(error => {res.render('error', {error})
   })
 })
 
