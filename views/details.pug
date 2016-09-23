@@ -2,9 +2,9 @@ extends layout
 
 block content
 
-  ul
-      li.details= book.title
-      li.details= book.author
+  ul.bookDetailsContainer
+      li.details.titleDetail= book.title
+      li.details.authorDetail= book.author
       li.details
-        img(src=book.image_url)
-      li.details= book.description
+        img(src=book.image_url).bookImg
+        li.details.bookDescriptionDetail= book.description

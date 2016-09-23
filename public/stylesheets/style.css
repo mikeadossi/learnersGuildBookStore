@@ -24,7 +24,7 @@ td{
   background-color:steelblue;
   transition: background-color 2s;
 }
-.submitBtn:hover{
+.searchBtn:hover{
   background-color:orange;
 }
 .navLink, .homeLink{
@@ -56,7 +56,6 @@ nav{
 
 }
 .details{
-  color:red;
   list-style-type: none;
 }
 
@@ -122,4 +121,27 @@ nav{
   border-radius:0 10px 10px 0;
   -moz-border-radius:0 10px 10px 0;
   -webkit-border-radius:0 10px 10px 0;
+}
+.titleDetail{
+  font-size:2em;
+  margin-top:1.5em;
+  margin-bottom:0.5em;
+}
+.authorDetail{
+  margin-bottom:0.5em;
+}
+.bookDescriptionDetail{
+  background-color:white;
+  margin-top:1em;
+  padding:2em;
+  float:right;
+  width:55%;
+}
+.bookImg{
+  float:left;
+}
+.bookDetailsContainer{
+  padding:3em;
+  width:90%;
+  height:38em;
 }
