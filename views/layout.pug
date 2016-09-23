@@ -9,10 +9,10 @@ html
       ul
         span
         li.navText
-          a(href='/') Home
+          a(href='/').homeLink Home
 
         li.navText
-          a(href='/books/create') Add Book
+          a(href='/books/create').navLink Add Book
         li.navInput
           form(action="/search", method="get")#searchDiv
             input(type="text", name="q", placeholder=" Search by Title").inputBox
