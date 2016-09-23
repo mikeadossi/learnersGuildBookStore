@@ -15,9 +15,11 @@ html
           a(href='/books/create') Add Book
         li.navInput
           form(action="/search", method="get")#searchDiv
-            input(type="text", name="q", placeholder="Search by Title").inputBox
+            input(type="text", name="q", placeholder=" Search by Title").inputBox
             button(type="submit", value="Submit").submitBtn Submit
 
 img(src="images/maleTurningPages.jpeg")
+
 #container
+
     block content

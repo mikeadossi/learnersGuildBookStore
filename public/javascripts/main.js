@@ -1,6 +1,7 @@
 
-var str = document.querySelector('.descr');
+var str = document.querySelector('.bookDescr');
 var strInner = str.innerHTML
+var bookTitle = document.querySelector('.bookTitle');
 
 strInner.substring(0, Math.min(10,strInner.length))
 
