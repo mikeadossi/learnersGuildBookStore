@@ -34,6 +34,11 @@ td{
 .bookTitle{
   background-color: skyblue;
 }
+.bookTitle a{
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+}
 .bookTitle:hover{
   background-color:steelblue;
   transition: background-color 2s;
@@ -231,7 +236,6 @@ nav{
     width:60em;
   }
   .descriptionTable{
-    position:absolute;
     width:40em;
   }
   .navInput{
