@@ -4,8 +4,10 @@ var db = require('../database');
 
 /* GET home page. */
 router.get('/', (request, response, next) => {
+
+  // response.send('Yay')
   db.getAllBooks()
-    .then(books => {
+    .then( books => {
       // const indexBooks = books.map( book =>
       //   Object.assign( {}, book,
       //     { description: book.description.slice( 0, 20 ) }

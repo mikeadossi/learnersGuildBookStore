@@ -1,3 +1,4 @@
+'use strict';
 var express = require('express');
 var router = express.Router();
 var db = require('../database');
@@ -8,10 +9,14 @@ router.get('/create', (req, res, next) => {
 })
 
 router.post('/new', (req, res, next) => {
-  const {title, author, image_url, description} = req.body
-  db.createBook(title, author, image_url, description)
-    .then(book => res.redirect(`/books/${book.id}`) )
-    .catch(error => { res.render('error', {error})})
+  const title = req.body.title
+  const author = req.body.author
+  const image_url = req.body.image_url
+  const description = req.body.description
+
+ db.createBook(title, author, image_url, description)
+   .then(book => res.redirect(`/books/${book.id}`) )
+   .catch(error => { res.render('error', {error})})
 })
 
 router.get('/delete/:id', (req, res, next) => {
